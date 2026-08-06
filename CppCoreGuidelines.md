@@ -12615,6 +12615,10 @@ Slicing -- that is, copying only part of an object using assignment or initializ
 the object was meant to be considered as a whole.
 In the rare cases where the slicing was deliberate the code can be surprising.
 
+##### Note
+
+It is not possible to copy part of an empty object, so this definition of slicing deliberately does not include empty objects (having no nonstatic data members), such as empty types used for tag dispatching.
+
 ##### Example
 
     class Shape { /* ... */ };
@@ -12654,7 +12658,7 @@ For example:
 
 ##### Enforcement
 
-Warn against slicing.
+Warn against slicing if the base type has any nonstatic data members (possibly via transitive bases) .
 
 ### <a name="res-construct"></a>ES.64: Use the `T{e}`notation for construction
 
