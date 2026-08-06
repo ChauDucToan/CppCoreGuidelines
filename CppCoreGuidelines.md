@@ -20534,6 +20534,7 @@ the choice between `'\n'` and `endl` is almost completely aesthetic.
 
 `<regex>` is the standard C++ regular expression library.
 It supports a variety of regular expression pattern conventions.
+For performance-critical work consider a third-party regular expression library.
 
 ## <a name="ss-chrono"></a>SL.chrono: Time
 
